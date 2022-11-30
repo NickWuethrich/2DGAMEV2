@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GAME2DV2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Background.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainExecution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Projectile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VeryBadEnemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/images/NinjaWalk3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/images/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/images/tile004.png" afterDir="false" />
+    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="1st Commit">
+      <change beforePath="$PROJECT_DIR$/src/VeryBadEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VeryBadEnemy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +61,14 @@
       <option name="presentableId" value="Default" />
       <updated>1669759482077</updated>
     </task>
+    <task id="LOCAL-00001" summary="1st Commit">
+      <created>1669784317169</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669784317169</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -91,5 +84,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="1st Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="1st Commit" />
   </component>
 </project>

@@ -4,6 +4,7 @@ public class VeryBadEnemy extends Enemy{
     Player player = new Player();
 
     private int speed1;
+    private int getSpeed1;
 
 
     public VeryBadEnemy(int x ,int y){

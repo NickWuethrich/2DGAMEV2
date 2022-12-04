@@ -16,8 +16,7 @@ public class MainExecution extends JApplet implements Runnable , KeyListener {
     private URL url;
     private Graphics second;
     Player player = new Player();
-
-    VeryBadEnemy veryBadEnemy1 = new VeryBadEnemy(150, 150);
+    VeryBadEnemy veryBadEnemy1 = new VeryBadEnemy();
 
     //framework from Applet supperclass
     @Override
@@ -38,7 +37,7 @@ public class MainExecution extends JApplet implements Runnable , KeyListener {
         }
         try {
             character = ImageIO.read(getClass().getResource("/resources/images/NinjaWalk3.png"));
-            //background = ImageIO.read((getClass().getResource("/resources/images/background.png")));
+            background = ImageIO.read((getClass().getResource("/resources/images/background.png")));
             verybadenemy = ImageIO.read(getClass().getResource("/resources/images/tile004.png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -75,9 +74,7 @@ public class MainExecution extends JApplet implements Runnable , KeyListener {
         while (true) {
             repaint();
             update();
-
             try {
-
                 Thread.sleep(17);// sleep for 17 1000/60 = 17 approx, game will update every 17 miliseconds
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -167,8 +164,8 @@ public class MainExecution extends JApplet implements Runnable , KeyListener {
 
         //.clearRect(player.getCenterX(), player.getCenterY(), 40,40);
         g.drawImage(verybadenemy,veryBadEnemy1.getXpos(), veryBadEnemy1.getYPos(), null);
-        g.drawImage(character, player.getCenterX(), player.getCenterY(), null);
-        //g.drawImage(background, 150, 150, this);
+        g.drawImage(character, player.getCenterX(), player.getCenterY(), this);
+      //  g.drawImage(background, 150, 150, this);
         g.dispose();
 
 

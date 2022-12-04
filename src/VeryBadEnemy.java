@@ -1,16 +1,16 @@
+import java.util.Random;
+
 import static java.lang.Math.abs;
 
 public class VeryBadEnemy extends Enemy{
     Player player = new Player();
-
-    private int speed1;
+    private int speed1 = 1;
     private int getSpeed1;
 
+    Random random = new Random();
+    int rand = random.nextInt(5);
 
-    public VeryBadEnemy(int x ,int y){
-        setXpos(x);
-        setYPos(y);
-
+    public VeryBadEnemy(){
 
     }
 
@@ -42,13 +42,11 @@ public class VeryBadEnemy extends Enemy{
 
         if  (Math.abs(player.getCenterX() - Xpos) > 1) {
             Xpos += speed1;
-
-
         }else if (Math.abs(player.getCenterY() - YPos) > 1) {
             YPos += speed1;
         }
 
-
+        }
     }
 
 
@@ -67,5 +65,5 @@ public class VeryBadEnemy extends Enemy{
 
 
 
-}
+
 

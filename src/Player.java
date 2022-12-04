@@ -5,8 +5,8 @@ public class Player {
     private int defaultXPosition = 100;
     private int DefaultYPosition = 380;
     private int WindowEnd;
-    private int CenterX = 100;
-    private int CenterY = 380;
+    private int CenterX ;
+    private int CenterY;
     private boolean jump = false;
 
     private int speedX = 0;

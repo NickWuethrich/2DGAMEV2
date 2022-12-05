@@ -4,11 +4,112 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="1st Commit">
+    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Slime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile021.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile025.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile026.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile027.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile028.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile029.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile030.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile031.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile032.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile033.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile034.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile035.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile036.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile037.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile038.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile039.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile040.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile041.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile042.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile043.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile044.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile045.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile046.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile047.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile048.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile049.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile050.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile051.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile052.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile053.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile054.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile055.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile056.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile057.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile058.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile059.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile021.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile025.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile026.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile027.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile028.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile029.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile030.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile031.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile032.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile033.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile034.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Background.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainExecution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VeryBadEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VeryBadEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Interactions/Projectile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VeryBadEnemy.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +143,18 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/nicka/Desktop/Nouveau dossier/applets/lib/applets-192.0.jar",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/nick/Documents/GitHub/2DGAMEV2/src/resources/images/SlimeSprites",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/resources/images/SlimeSprites" />
+      <recent name="$PROJECT_DIR$/src/resources/images/PlayerSprites" />
       <recent name="$PROJECT_DIR$/src/resources/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -61,19 +165,6 @@
     <configuration type="Applet">
       <option name="MAIN_CLASS_NAME" value="MainExecution" />
       <module name="GAME2DV2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="2DGAMEV2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="2DGAMEV2" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

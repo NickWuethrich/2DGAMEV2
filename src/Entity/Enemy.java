@@ -1,4 +1,7 @@
+package Entity;
+
 import java.awt.*;
+import java.util.Random;
 
 public class Enemy {
 
@@ -11,8 +14,12 @@ public class Enemy {
     protected int Xpos;
     protected int YPos;
 
-    public void update(){
+    Player player = new Player();
+    Random random = new Random();
 
+
+    public void update(){
+        EnemyMovement();
 
     }
 
@@ -24,7 +31,23 @@ public class Enemy {
 
     }
 
-    public void EnemyMovement(){
+    public void EnemyMovement() {
+            int rand = random.nextInt(10);
+            //System.out.println(rand);
+            if (rand == 1)
+                Xpos += Speed;
+            if (rand == 3 )
+                YPos += Speed;
+            if (rand == 5)
+                Xpos -= Speed;
+            if (rand == 6 || rand == 8)
+                YPos -= Speed;
+
+
+    }
+
+
+    public void EnemyFollow(){
 
     }
 

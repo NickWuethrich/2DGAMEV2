@@ -17,7 +17,7 @@ public class MainExecution extends JApplet implements Runnable{
     private int SpriteScale = 2;
     Player player = new Player();
     Slime slime = new Slime();
-    GameAreaCell gameAreaCell = new GameAreaCell();
+
 
     @Override
     public void init() { // init will run like a main method for Applet
@@ -75,7 +75,6 @@ public class MainExecution extends JApplet implements Runnable{
 
       @Override
     public void paint(Graphics g) {
-        gameAreaCell.CellPaint(g);
        super.paint(g);
        Graphics2D g2d = (Graphics2D) g;
           g2d.scale(SpriteScale,SpriteScale);

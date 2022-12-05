@@ -7,12 +7,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Timer;
 
 public class Player implements KeyListener{
-    private Image playerImageCharacter, playerUp, playerDown,playerDown1, playerDown2,playerDown3,playerDown4,playerDown5,playerRight, playerLeft ,playerAttack;
+    private BufferedImage playerImageCharacter, playerUp, playerDown,playerDown1, playerDown2,playerDown3,playerDown4,playerDown5,playerRight, playerLeft ,playerAttack, player;
     private int CenterX;
     private int CenterY;
     ArrayList<Integer> spriteAnimationInit = new ArrayList<Integer>();
@@ -21,8 +22,11 @@ public class Player implements KeyListener{
     }
     private int counter;
     private int counter2;
+    private boolean attackState = false;
+
 
     public void loadPlayerImageCharacter() {
+
         try {
             playerImageCharacter = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile000.png"));
             playerUp = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile012.png"));
@@ -86,25 +90,29 @@ public class Player implements KeyListener{
         Speed = 6;
 
         counter++;
-        if  (counter > 5) {
-            spriteAnimation();
+        if  (counter > 10) {
+            spriteDirectionAnimation();
             counter = 0;
-            System.out.println(counter);
-            System.out.println("_____________________________________________");
-            counter2++;
-            System.out.println(counter2);
-            if (counter2 > 100) {
-                if (counter > 70 && playerImageCharacter.equals(playerAttack)) {
-                    playerImageCharacter = playerRight;
-                }
-                counter2= 0;
             }
+
         }
 
         //System.out.println(counter);
+
+    public void resetAttackAnimation(){
+        if(playerImageCharacter.equals(playerAttack)){
+            try {
+                Thread.sleep(2000);
+                playerImageCharacter = playerRight;
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
     }
 
-    public void spriteAnimation() {
+
+    public void spriteDirectionAnimation() {
         spriteListInit();
             if (spriteAnimationInit.get(0) == 1) {
                 playerImageCharacter = playerUp;
@@ -120,8 +128,10 @@ public class Player implements KeyListener{
             }
             if (spriteAnimationInit.get(0) == 5) {
                 playerImageCharacter = playerAttack;
-                }
+                resetAttackAnimation();
             }
+    }
+
 
     public void moveUP(){
         CenterY -= Speed;
@@ -178,6 +188,35 @@ public class Player implements KeyListener{
 
             case KeyEvent.VK_E:
                 spriteAnimationInit.set(0,5);
+                //spriteDirectionAnimation();
+/**
+                if (attackState == false) {
+                    try {
+
+                        attackState = !attackState;
+
+
+                        //attackState = true;
+                        //spriteListInit();
+                        //playerImageCharacter = playerAttack;
+                        //this.attackState = false;
+                        //playerAttack = playerRight;
+                        //spriteDirectionAnimation();
+
+                        spriteAnimationInit.set(0,4);
+                        Thread.sleep(2000);
+                        //moveRight();
+
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+                else {
+                   // attackState = false;
+                    attackState = !attackState;
+                }
+
+**/
                 break;
         }
 
@@ -200,8 +239,9 @@ public class Player implements KeyListener{
             case KeyEvent.VK_RIGHT:
                 stop();
                 break;
-            case KeyEvent.VK_SPACE:
-               playerImageCharacter = playerLeft;
+
+            case  KeyEvent.VK_E:
+                spriteAnimationInit.set(0,6);
                 break;
 
         }

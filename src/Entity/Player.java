@@ -3,39 +3,37 @@ package Entity;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.image.ImageObserver;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Timer;
 
-public class Player implements KeyListener {
-    private Image playerImageCharacter, playerUp, playerDown, playerRight, playerLeft;
+public class Player implements KeyListener{
+    private Image playerImageCharacter, playerUp, playerDown,playerDown1, playerDown2,playerDown3,playerDown4,playerDown5,playerRight, playerLeft ,playerAttack;
     private int CenterX;
     private int CenterY;
-
-    ArrayList<Integer> animationDirectionCounter = new ArrayList<Integer>();
-
-    public void setAnimationDirectionInit(){
-            animationDirectionCounter.add(12);
-            //for (int i : animationDirectionCounter){
-           // System.out.println(i);
-
+    ArrayList<Integer> spriteAnimationInit = new ArrayList<Integer>();
+    private void spriteListInit(){
+        spriteAnimationInit.add(13);
     }
-
-
-
-
+    private int counter;
+    private int counter2;
 
     public void loadPlayerImageCharacter() {
-
         try {
             playerImageCharacter = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile000.png"));
             playerUp = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile012.png"));
             playerDown = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile001.png"));
-            playerLeft = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile006.png"));
+            playerDown1 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile002.png"));
+            playerDown2 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile003.png"));
+            playerDown3 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile004.png"));
+            playerDown4 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile005.png"));
+            playerLeft = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile006left.png"));
             playerRight = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile006.png"));
-
+            playerAttack = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile043.png"));
 
         } catch (
                 IOException e) {
@@ -43,9 +41,6 @@ public class Player implements KeyListener {
         }
 
     }
-
-
-
     public int getSpeed() {
         return Speed;
     }
@@ -70,58 +65,63 @@ public class Player implements KeyListener {
     public void setCenterY(int centerY) {
         CenterY = centerY;
     }
-    public void paint(Graphics g) {
-        Graphics2D g2d = (Graphics2D) g;
-        setAnimationDirectionInit();
-
-        // g2d.drawImage(playerImageCharacter, getCenterX(), getCenterY(), null);
-        if (animationDirectionCounter.get(0) == 0) {
-            playerImageCharacter = playerUp;
-            //g2d.drawImage(playerUp, getCenterX(), getCenterY(), null);
-        } else {
-            if (animationDirectionCounter.get(0) == 1) {
-                playerImageCharacter = playerDown;
-                //g2d.drawImage(playerDown, getCenterX(), getCenterY(), null);
-            } else {
-                playerImageCharacter = playerLeft;
-                if (animationDirectionCounter.get(0) == 2) {
-                    //g2d.drawImage(playerRight, getCenterX(), getCenterY(), null);
-                } else {
-                    if (animationDirectionCounter.get(0) == 3) {
-                        playerImageCharacter = playerRight;
-                        //g2d.drawImage(playerLeft, getCenterX(), getCenterY(), null);
-                    }
-                }
-            }
-        }
-        g2d.drawImage(playerImageCharacter, getCenterX(), getCenterY(), null);
+    public void paint(Graphics g)  {
+        g.drawImage(playerImageCharacter, getCenterX(), getCenterY(), null);
     }
 
-
-
-
     public void update() {
-        if(CenterX <= 6) {
+
+        if (CenterX <= 6) {
             CenterX = 6;
         }
-        if (CenterX >= 756){
+        if (CenterX >= 756) {
             CenterX = 750;
         }
         if (CenterY <= 6)
             CenterY = 6;
 
-        if (CenterY >= 420){
+        if (CenterY >= 420) {
             CenterY = 420;
         }
         Speed = 6;
-        moveUP();
-        moveDown();
-        moveRight();
-        moveLeft();
 
+        counter++;
+        if  (counter > 5) {
+            spriteAnimation();
+            counter = 0;
+            System.out.println(counter);
+            System.out.println("_____________________________________________");
+            counter2++;
+            System.out.println(counter2);
+            if (counter2 > 100) {
+                if (counter > 70 && playerImageCharacter.equals(playerAttack)) {
+                    playerImageCharacter = playerRight;
+                }
+                counter2= 0;
+            }
+        }
+
+        //System.out.println(counter);
     }
 
-
+    public void spriteAnimation() {
+        spriteListInit();
+            if (spriteAnimationInit.get(0) == 1) {
+                playerImageCharacter = playerUp;
+            }
+            if (spriteAnimationInit.get(0) == 2) {
+                playerImageCharacter = playerDown;
+            }
+            if (spriteAnimationInit.get(0) == 3) {
+                playerImageCharacter = playerLeft;
+            }
+            if (spriteAnimationInit.get(0) == 4) {
+                playerImageCharacter = playerRight;
+            }
+            if (spriteAnimationInit.get(0) == 5) {
+                playerImageCharacter = playerAttack;
+                }
+            }
 
     public void moveUP(){
         CenterY -= Speed;
@@ -148,53 +148,48 @@ public class Player implements KeyListener {
     }
 
 
+
     @Override
     public void keyTyped(KeyEvent e) {
-
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
         switch (e.getKeyCode()) {
             case KeyEvent.VK_UP:
+                spriteAnimationInit.set(0,1);
                 moveUP();
-                animationDirectionCounter.set(0,0);
                 break;
 
             case KeyEvent.VK_DOWN:
+                spriteAnimationInit.set(0,2);
                 moveDown();
-                animationDirectionCounter.set(0,1);
                 break;
 
             case KeyEvent.VK_LEFT:
+                spriteAnimationInit.set(0,3);
                 moveLeft();
-                animationDirectionCounter.set(0,2);
-                System.out.println(getCenterX());
                 break;
 
             case KeyEvent.VK_RIGHT:
+                spriteAnimationInit.set(0,4);
                 moveRight();
-                animationDirectionCounter.set(0,3);
-                System.out.println(getCenterX());
                 break;
 
-            case KeyEvent.VK_SPACE:
-                System.out.println("Jumping");
+            case KeyEvent.VK_E:
+                spriteAnimationInit.set(0,5);
                 break;
         }
 
 
     }
-
     @Override
     public void keyReleased(KeyEvent e) {
         switch (e.getKeyCode()) {
             case KeyEvent.VK_UP:
                 stop();
                 break;
-
             case KeyEvent.VK_DOWN:
-
                 stop();
                 break;
 
@@ -206,6 +201,7 @@ public class Player implements KeyListener {
                 stop();
                 break;
             case KeyEvent.VK_SPACE:
+               playerImageCharacter = playerLeft;
                 break;
 
         }

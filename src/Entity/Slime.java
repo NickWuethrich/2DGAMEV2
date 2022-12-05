@@ -4,7 +4,10 @@ import static java.lang.Math.abs;
 
 public class Slime extends Enemy {
     public Slime(){
+        setXpos(150);
+        setYPos(200);
     }
+
 
     @Override
     public void update() {
@@ -18,7 +21,7 @@ public class Slime extends Enemy {
     @Override
     public void EnemyMovement() {
         super.EnemyMovement();
-        setSpeed(1);
+        setSpeed(2);
         }
     }
 

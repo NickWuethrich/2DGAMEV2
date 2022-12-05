@@ -1,3 +1,5 @@
+package GameArea;
+
 public class Background {
     private int bgX , bgY;
 

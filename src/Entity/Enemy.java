@@ -14,12 +14,18 @@ public class Enemy {
     protected int Xpos;
     protected int YPos;
 
+    private  int counter;
+
     Player player = new Player();
     Random random = new Random();
 
 
     public void update(){
-        EnemyMovement();
+        counter++;
+        if (counter>5) {
+            EnemyMovement();
+            counter = 0;
+        }
 
     }
 
@@ -34,13 +40,13 @@ public class Enemy {
     public void EnemyMovement() {
             int rand = random.nextInt(10);
             //System.out.println(rand);
-            if (rand == 1)
+            if (rand == 1|| rand == 2)
                 Xpos += Speed;
-            if (rand == 3 )
+            if (rand == 3 || rand == 4)
                 YPos += Speed;
             if (rand == 5)
                 Xpos -= Speed;
-            if (rand == 6 || rand == 8)
+            if (rand == 6)
                 YPos -= Speed;
 
 

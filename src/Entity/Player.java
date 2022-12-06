@@ -26,8 +26,8 @@ public class Player implements KeyListener{
 
 
     public void loadPlayerImageCharacter() {
-
         try {
+
             playerImageCharacter = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile000.png"));
             playerUp = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile012.png"));
             playerDown = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile001.png"));
@@ -96,13 +96,11 @@ public class Player implements KeyListener{
             }
 
         }
-
         //System.out.println(counter);
-
     public void resetAttackAnimation(){
         if(playerImageCharacter.equals(playerAttack)){
             try {
-                Thread.sleep(2000);
+                Thread.sleep(1000);
                 playerImageCharacter = playerRight;
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);

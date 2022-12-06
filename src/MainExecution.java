@@ -58,7 +58,7 @@ public class MainExecution extends JApplet implements Runnable{
             update();
 
             try {
-                Thread.sleep(17);// sleep for 17 1000/60 = 17 approx, game will update every 17 miliseconds
+                Thread.sleep(8);// sleep for 17 1000/60 = 17 approx, game will update every 17 miliseconds
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

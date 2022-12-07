@@ -12,9 +12,9 @@ import java.io.IOException;
 
 public class MainExecution extends JApplet implements Runnable{
     private static Background bg;
-    private BufferedImage character, background,enemy1;
-    Timer timer;
+    private BufferedImage image,enemy1;
     private int SpriteScale = 2;
+    private Graphics second;
     Player player = new Player();
     Slime slime = new Slime();
 
@@ -29,8 +29,6 @@ public class MainExecution extends JApplet implements Runnable{
         player.loadPlayerImageCharacter();
         addKeyListener(player);
         try {
-         //    character = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile000.png"));
-            background = ImageIO.read((getClass().getResource("/resources/images/background.png")));
             enemy1 = ImageIO.read(getClass().getResource("/resources/images/SlimeSprites/tile000.png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -45,7 +43,8 @@ public class MainExecution extends JApplet implements Runnable{
     @Override
     public void stop() {}
     @Override
-    public void destroy() {}
+    public void destroy() {
+    }
 
     // updates Characters
     // updated Environment
@@ -56,7 +55,6 @@ public class MainExecution extends JApplet implements Runnable{
         while (true) {
             repaint();
             update();
-
             try {
                 Thread.sleep(8);// sleep for 17 1000/60 = 17 approx, game will update every 17 miliseconds
             } catch (InterruptedException e) {
@@ -70,6 +68,20 @@ public class MainExecution extends JApplet implements Runnable{
         player.update();
         slime.update();
 
+    }
+
+    public void update(Graphics g){
+        if (image == null) {
+            image = (BufferedImage) createImage(this.getWidth(), this.getHeight());
+            second = image.getGraphics();
+        }
+
+        second.setColor(getBackground());
+        second.fillRect(0, 0, getWidth(), getHeight());
+        second.setColor(getForeground());
+        paint(second);
+
+        g.drawImage(image, 0, 0, this);
     }
 
 

@@ -1,43 +1,71 @@
 package Entity;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Timer;
+import java.util.List;
 
-public class Player implements KeyListener{
-    private BufferedImage playerImageCharacter, playerUp, playerDown,playerDown1, playerDown2,playerDown3,playerDown4,playerDown5,playerRight, playerLeft ,playerAttack, player;
+public class Player implements KeyListener {
+    private BufferedImage playerImageCharacter, playerUp, playerDown, playerDown1, playerDown2, playerDown3, playerDown4, playerDown5, playerDown6, playerDown7, playerRight, playerLeft, playerAttack, player;
+    private BufferedImage playerUp1, playerUp2, playerUp3, playerUp4, playerUp5, playerUpAttack,playerUpAttack1,playerUpAttack2,playerUpAttack3,playerUpAttack4,playerUpAttack5,playerUpAttack6;
+    private BufferedImage playerRight1, playerRight2,playerRight3,playerRight4,playerRight5,playerRight6,playerAttackRight1,playerAttackRight2,playerAttackRight3,playerAttackRight4,playerAttackRight;
     private int CenterX;
     private int CenterY;
+
+    private int playIndexStart, playIndexEnd;
     ArrayList<Integer> spriteAnimationInit = new ArrayList<Integer>();
-    private void spriteListInit(){
+    List<BufferedImage> playerImages = new ArrayList<BufferedImage>();
+
+
+    private void spriteListInit() {
         spriteAnimationInit.add(13);
     }
-    private int counter;
-    private int counter2;
+
+    private int counter,i;
     private boolean attackState = false;
 
 
     public void loadPlayerImageCharacter() {
         try {
-
             playerImageCharacter = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile000.png"));
+
             playerUp = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile012.png"));
-            playerDown = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile001.png"));
-            playerDown1 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile002.png"));
-            playerDown2 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile003.png"));
-            playerDown3 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile004.png"));
-            playerDown4 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile005.png"));
-            playerLeft = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile006left.png"));
+            playerUp1 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile013.png"));
+            playerUp2 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile014.png"));
+            playerUp3 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile015.png"));
+            playerUp4 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile016.png"));
+
+            playerUpAttack1 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile017.png"));
+
             playerRight = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile006.png"));
-            playerAttack = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile043.png"));
+            playerRight1 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile025.png"));
+            playerRight2= ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile026.png"));
+            playerRight3 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile027.png"));
+            playerRight4 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile028.png"));
+            playerRight5 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile029.png"));
+            playerRight6 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile006.png"));
+
+            playerDown = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile001.png"));
+            playerDown1 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile018.png"));
+            playerDown2 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile019.png"));
+            playerDown3 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile020.png"));
+            playerDown4 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile021.png"));
+            playerDown5 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile022.png"));
+            playerDown6 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile023.png"));
+            playerDown7 = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile000.png"));
+
+            playerAttackRight= ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile042.png"));
+            playerAttackRight1= ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile042.png"));
+            playerAttackRight2= ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile043.png"));
+            playerAttackRight3= ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile044.png"));
+            playerAttackRight4= ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile045.png"));
+
+
+            playerLeft = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile006left.png"));
 
         } catch (
                 IOException e) {
@@ -45,6 +73,49 @@ public class Player implements KeyListener{
         }
 
     }
+
+    private void playerImageList() {
+        playerImages.add(playerDown1);
+        playerImages.add(playerDown2);
+        playerImages.add(playerDown3);
+        playerImages.add(playerDown4);
+        playerImages.add(playerDown5);
+        playerImages.add(playerDown6);
+
+        playerImages.add(playerUp1);
+        playerImages.add(playerUp2);
+        playerImages.add(playerUp3);
+        playerImages.add(playerUp4);
+        playerImages.add(playerUp3);
+        playerImages.add(playerUp2);
+
+        playerImages.add(playerRight1);
+        playerImages.add(playerRight2);
+        playerImages.add(playerRight3);
+        playerImages.add(playerRight4);
+        playerImages.add(playerRight5);
+        playerImages.add(playerRight6);
+
+        playerImages.add(playerAttackRight1);
+        playerImages.add(playerAttackRight1);
+        playerImages.add(playerAttackRight2);
+        playerImages.add(playerAttackRight2);
+        playerImages.add(playerAttackRight3);
+        playerImages.add(playerAttackRight4);
+
+        playerImages.add(playerUpAttack1);
+        playerImages.add(playerUpAttack2);
+        playerImages.add(playerUpAttack3);
+        playerImages.add(playerUpAttack3);
+        playerImages.add(playerUpAttack4);
+        playerImages.add(playerUpAttack4);
+
+
+
+
+
+    }
+
     public int getSpeed() {
         return Speed;
     }
@@ -63,13 +134,16 @@ public class Player implements KeyListener{
     public void setCenterX(int centerX) {
         CenterX = centerX;
     }
+
     public int getCenterY() {
         return CenterY;
     }
+
     public void setCenterY(int centerY) {
         CenterY = centerY;
     }
-    public void paint(Graphics g)  {
+
+    public void paint(Graphics g) {
         g.drawImage(playerImageCharacter, getCenterX(), getCenterY(), null);
     }
 
@@ -88,19 +162,50 @@ public class Player implements KeyListener{
             CenterY = 420;
         }
         Speed = 6;
+        spriteDirectionAnimation();
+        playerAnimation(playerDown, 0, 5);
+        playerAnimation(playerUp, 6, 11);
+        playerAnimation(playerRight,12,17);
+        playerAnimation(playerAttackRight,18,23);
+    }
 
+    public void playerAnimation(BufferedImage playerDirection, int playIndexStart, int playIndexEnd) {
+        playerImageList();
         counter++;
-        if  (counter > 10) {
-            spriteDirectionAnimation();
-            counter = 0;
+            if (playerImageCharacter.equals(playerDirection)) {
+                if (counter > 10) {
+                    i=playIndexStart;
+                    playerImageCharacter = playerImages.get(i);
+                    if (counter > 20) {
+                        i=playIndexStart+1;
+                        playerImageCharacter = playerImages.get(i);
+                        if (counter > 30) {
+                            i= playIndexStart+2;
+                            playerImageCharacter = playerImages.get(i);
+                            if (counter > 40) {
+                                i= playIndexStart+3;
+                                playerImageCharacter = playerImages.get(i);
+                                if (counter > 50) {
+                                    i= playIndexStart+4;
+                                    playerImageCharacter = playerImages.get(i);
+                                    if (counter > 60) {
+                                        i= playIndexEnd;
+                                        playerImageCharacter = playerImages.get(i);
+                                            counter = 0;
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
-        }
-        //System.out.println(counter);
     public void resetAttackAnimation(){
-        if(playerImageCharacter.equals(playerAttack)){
+        if(playerImageCharacter.equals(playerAttackRight4)){
             try {
-                Thread.sleep(1000);
+                Thread.sleep(15);
                 playerImageCharacter = playerRight;
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -109,11 +214,13 @@ public class Player implements KeyListener{
 
     }
 
-
     public void spriteDirectionAnimation() {
         spriteListInit();
             if (spriteAnimationInit.get(0) == 1) {
                 playerImageCharacter = playerUp;
+            }
+            if (spriteAnimationInit.get(0)== 7){
+                playerImageCharacter=playerUpAttack;
             }
             if (spriteAnimationInit.get(0) == 2) {
                 playerImageCharacter = playerDown;
@@ -125,8 +232,7 @@ public class Player implements KeyListener{
                 playerImageCharacter = playerRight;
             }
             if (spriteAnimationInit.get(0) == 5) {
-                playerImageCharacter = playerAttack;
-                resetAttackAnimation();
+                playerImageCharacter = playerAttackRight;
             }
     }
 
@@ -186,60 +292,42 @@ public class Player implements KeyListener{
 
             case KeyEvent.VK_E:
                 spriteAnimationInit.set(0,5);
-                //spriteDirectionAnimation();
-/**
-                if (attackState == false) {
-                    try {
-
-                        attackState = !attackState;
-
-
-                        //attackState = true;
-                        //spriteListInit();
-                        //playerImageCharacter = playerAttack;
-                        //this.attackState = false;
-                        //playerAttack = playerRight;
-                        //spriteDirectionAnimation();
-
-                        spriteAnimationInit.set(0,4);
-                        Thread.sleep(2000);
-                        //moveRight();
-
-                    } catch (InterruptedException ex) {
-                        throw new RuntimeException(ex);
-                    }
+                if(playerImageCharacter.equals(playerUp)){
+                    spriteAnimationInit.set(0,7);
                 }
-                else {
-                   // attackState = false;
-                    attackState = !attackState;
-                }
-
-**/
                 break;
         }
-
-
     }
     @Override
     public void keyReleased(KeyEvent e) {
         switch (e.getKeyCode()) {
             case KeyEvent.VK_UP:
+                spriteAnimationInit.set(0,6);
+                playerImageCharacter = playerUp;
                 stop();
                 break;
             case KeyEvent.VK_DOWN:
+                spriteAnimationInit.set(0,6);
+                playerImageCharacter = playerDown7;
                 stop();
                 break;
 
             case KeyEvent.VK_LEFT:
+                spriteAnimationInit.set(0,6);
                 stop();
                 break;
 
             case KeyEvent.VK_RIGHT:
+                spriteAnimationInit.set(0,6);
+                playerImageCharacter = playerRight;
                 stop();
                 break;
 
             case  KeyEvent.VK_E:
                 spriteAnimationInit.set(0,6);
+                playerImageCharacter=playerRight;
+
+
                 break;
 
         }

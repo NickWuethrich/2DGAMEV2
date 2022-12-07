@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="">
+    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="added basic player Mouvement + Animation">
+      <change afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Slime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Slime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainExecution.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,16 +44,19 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nicka/Desktop/Nouveau dossier/applets/lib/applets-192.0.jar&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nick/Documents/GitHub/2DGAMEV2/src/resources/images&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/resources/images" />
+      <recent name="$PROJECT_DIR$/src/resources/images/PlayerSprites" />
+      <recent name="$PROJECT_DIR$/src/resources/images/SlimeSprites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/images" />
@@ -59,19 +66,6 @@
     <configuration type="Applet">
       <option name="MAIN_CLASS_NAME" value="MainExecution" />
       <module name="GAME2DV2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="2DGAMEV2" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="2DGAMEV2" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,12 +87,12 @@
       <option name="project" value="LOCAL" />
       <updated>1669784317169</updated>
     </task>
-    <task id="LOCAL-00002" summary="player attack animation">
-      <created>1670238339242</created>
+    <task id="LOCAL-00002" summary="added basic player Mouvement + Animation">
+      <created>1670201464828</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1670238339242</updated>
+      <updated>1670201464828</updated>
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
@@ -117,7 +111,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1st Commit" />
-    <MESSAGE value="player attack animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="player attack animation" />
+    <MESSAGE value="added basic player Mouvement + Animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="added basic player Mouvement + Animation" />
   </component>
 </project>

@@ -7,6 +7,10 @@ public class Slime extends Enemy {
         setXpos(150);
         setYPos(200);
     }
+    public Slime(int x,int y){
+        this.setXpos(x);
+        this.setYPos(y);
+    }
 
 
     @Override

@@ -48,8 +48,6 @@ public class Enemy {
                 Xpos -= Speed;
             if (rand == 6)
                 YPos -= Speed;
-
-
     }
 
 

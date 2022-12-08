@@ -83,7 +83,7 @@ public class MainExecution extends JApplet implements Runnable{
 
         g.drawImage(image, 0, 0, this);
     }
-
+// comment yes
 
       @Override
     public void paint(Graphics g) {
@@ -91,9 +91,13 @@ public class MainExecution extends JApplet implements Runnable{
        Graphics2D g2d = (Graphics2D) g;
           g2d.scale(SpriteScale,SpriteScale);
         g2d.drawImage(enemy1,slime.getXpos(), slime.getYPos(), null);
-              player.paint(g2d);
+              draw(g2d);
+    }
 
-
+    public void draw(Graphics2D graphics2D){
+        player.paint(graphics2D);
 
     }
+
+
 }

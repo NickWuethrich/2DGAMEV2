@@ -327,7 +327,6 @@ public class Player implements KeyListener {
                 spriteAnimationInit.set(0,6);
                 playerImageCharacter=playerRight;
 
-
                 break;
 
         }

@@ -10,19 +10,18 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class MainExecution extends JApplet implements Runnable{
-    private static Background bg;
-    private BufferedImage image,enemy1;
+public class MainExecution extends JApplet implements Runnable {
+    private BufferedImage image, enemy1;
     private int SpriteScale = 2;
     private Graphics second;
     Player player = new Player();
     Slime slime = new Slime();
 
-
     @Override
     public void init() { // init will run like a main method for Applet
         setSize(768, 576);
-        setBackground(Color.BLACK);
+        // setBackground(Color.BLACK);
+        add(new DrawPanel());
         setFocusable(true);
         Frame frame = (Frame) this.getParent().getParent();// no idea how this works
         frame.setTitle("2DGame");
@@ -35,13 +34,17 @@ public class MainExecution extends JApplet implements Runnable{
 
         }
     }
+
     @Override
     public void start() {
         Thread thread = new Thread(this);// "this" connects run method to thread
         thread.start();// we need run method from Runnable interface to start thread
     }
+
     @Override
-    public void stop() {}
+    public void stop() {
+    }
+
     @Override
     public void destroy() {
     }
@@ -69,8 +72,9 @@ public class MainExecution extends JApplet implements Runnable{
         slime.update();
 
     }
+/**
+    public void update(Graphics g) {
 
-    public void update(Graphics g){
         if (image == null) {
             image = (BufferedImage) createImage(this.getWidth(), this.getHeight());
             second = image.getGraphics();
@@ -83,21 +87,35 @@ public class MainExecution extends JApplet implements Runnable{
 
         g.drawImage(image, 0, 0, this);
     }
+ **/
 // comment yes
 
-      @Override
+    @Override
     public void paint(Graphics g) {
-       super.paint(g);
-       Graphics2D g2d = (Graphics2D) g;
-          g2d.scale(SpriteScale,SpriteScale);
-        g2d.drawImage(enemy1,slime.getXpos(), slime.getYPos(), null);
-              draw(g2d);
+        super.paint(g);
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.scale(SpriteScale, SpriteScale);
+        g2d.drawImage(enemy1, slime.getXpos(), slime.getYPos(), null);
+       //  draw(g2d);
     }
 
-    public void draw(Graphics2D graphics2D){
+    public void draw(Graphics2D graphics2D) {
         player.paint(graphics2D);
 
     }
+      class DrawPanel extends JPanel{
+        public DrawPanel (){
+            setBackground(Color.BLACK);
+        }
 
+        public  void  paintComponent(Graphics  g){
+            super.paintComponent(g);
+            Graphics2D g2d = (Graphics2D) g;
+            g2d.scale(SpriteScale,SpriteScale);
+            player.paint(g2d);
+        }
+
+
+      }
 
 }

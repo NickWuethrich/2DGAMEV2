@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="improvedPlayerAnimations">
+    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="reset on laptop correct version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainExecution.java" afterDir="false" />
@@ -97,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670396195546</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="reset on laptop correct version">
+      <created>1670539879298</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670539879298</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +123,7 @@
     <MESSAGE value="1st Commit" />
     <MESSAGE value="added basic player Mouvement + Animation" />
     <MESSAGE value="improvedPlayerAnimations" />
-    <option name="LAST_COMMIT_MESSAGE" value="improvedPlayerAnimations" />
+    <MESSAGE value="reset on laptop correct version" />
+    <option name="LAST_COMMIT_MESSAGE" value="reset on laptop correct version" />
   </component>
 </project>

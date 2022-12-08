@@ -173,22 +173,22 @@ public class Player implements KeyListener {
         playerImageList();
         counter++;
             if (playerImageCharacter.equals(playerDirection)) {
-                if (counter > 20) {
+                if (counter > 5) {
                     i=playIndexStart;
                     playerImageCharacter = playerImages.get(i);
-                    if (counter > 40) {
+                    if (counter > 10) {
                         i=playIndexStart+1;
                         playerImageCharacter = playerImages.get(i);
-                        if (counter > 60) {
+                        if (counter > 15) {
                             i= playIndexStart+2;
                             playerImageCharacter = playerImages.get(i);
-                            if (counter > 80) {
+                            if (counter > 20) {
                                 i= playIndexStart+3;
                                 playerImageCharacter = playerImages.get(i);
-                                if (counter > 100) {
+                                if (counter > 25) {
                                     i= playIndexStart+4;
                                     playerImageCharacter = playerImages.get(i);
-                                    if (counter > 120) {
+                                    if (counter > 30) {
                                         i= playIndexEnd;
                                         playerImageCharacter = playerImages.get(i);
                                             counter = 0;
@@ -243,13 +243,10 @@ public class Player implements KeyListener {
 
     public void moveDown(){
         CenterY += Speed;
-
-
     }
 
     public void moveRight() {
         CenterX += Speed;
-
     }
 
     public void moveLeft() {

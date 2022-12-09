@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="correct Animation flickering that only occured on Laptop">
+    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="Laptop update commit">
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile025left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile026left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile027left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile028left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile029left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile042left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile043left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile044left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/PlayerSprites/tile045left.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameArea/GameAreaCell.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameArea/TileMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainExecution.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,23 +48,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nick/Documents/GitHub/2DGAMEV2/src/resources/images&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/nick/Documents/GitHub/2DGAMEV2/src/resources/images/PlayerSprites",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/resources/images" />
       <recent name="$PROJECT_DIR$/src/resources/images/PlayerSprites" />
+      <recent name="$PROJECT_DIR$/src/resources/images" />
       <recent name="$PROJECT_DIR$/src/resources/images/SlimeSprites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -110,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670540908402</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Laptop update commit">
+      <created>1670541434843</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670541434843</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +152,7 @@
     <MESSAGE value="improvedPlayerAnimations" />
     <MESSAGE value="reset on laptop correct version" />
     <MESSAGE value="correct Animation flickering that only occured on Laptop" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct Animation flickering that only occured on Laptop" />
+    <MESSAGE value="Laptop update commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Laptop update commit" />
   </component>
 </project>

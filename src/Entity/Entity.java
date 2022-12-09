@@ -8,10 +8,9 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Entity extends JApplet {
+public class Entity {
 
-    private List<Image> playerDownImages;
-    private int playerImageIndex;
+
 
 
 

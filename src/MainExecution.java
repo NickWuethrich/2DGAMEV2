@@ -1,7 +1,7 @@
 import Entity.Player;
 import Entity.Slime;
 import GameArea.Background;
-import GameArea.GameAreaCell;
+
 
 
 import javax.imageio.ImageIO;
@@ -12,14 +12,16 @@ import java.io.IOException;
 
 public class MainExecution extends JApplet implements Runnable {
     private BufferedImage image, enemy1;
-    private int SpriteScale = 2;
+    private final int panelHeight = 1080;
+    private final int panelWidth = 1920;
+    private int SpriteScale = 3;
     private Graphics second;
     Player player = new Player();
     Slime slime = new Slime();
 
     @Override
     public void init() { // init will run like a main method for Applet
-        setSize(768, 576);
+        setSize(panelWidth, panelHeight);
         // setBackground(Color.BLACK);
         add(new DrawPanel());
         setFocusable(true);
@@ -72,23 +74,6 @@ public class MainExecution extends JApplet implements Runnable {
         slime.update();
 
     }
-/**
-    public void update(Graphics g) {
-
-        if (image == null) {
-            image = (BufferedImage) createImage(this.getWidth(), this.getHeight());
-            second = image.getGraphics();
-        }
-
-        second.setColor(getBackground());
-        second.fillRect(0, 0, getWidth(), getHeight());
-        second.setColor(getForeground());
-        paint(second);
-
-        g.drawImage(image, 0, 0, this);
-    }
- **/
-// comment yes
 
     @Override
     public void paint(Graphics g) {

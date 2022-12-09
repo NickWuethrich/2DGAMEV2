@@ -4,7 +4,6 @@ import java.awt.*;
 import java.util.Random;
 
 public class Enemy {
-
     private Image character;
     private int Health;
     private int NewHealth;

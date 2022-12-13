@@ -13,6 +13,7 @@ public class MainExecution extends JApplet implements Runnable {
     private Graphics second;
    Player player = new Player(150 , 150);
    //Slime slime = new Slime(150, 150,1,player);
+    // testCommit
 
     @Override
     public void init() { // init will run like a main method for Applet

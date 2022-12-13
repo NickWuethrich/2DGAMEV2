@@ -3,79 +3,27 @@ package Entity;
 import java.awt.*;
 import java.util.Random;
 
-public class Enemy {
-    private Image character;
-    private int Health;
-    private int NewHealth;
-    private int Strength;
-    protected int Speed;
-    private int SpeStrength;
-    protected int Xpos;
-    protected int YPos;
+public abstract class Enemy extends Entity {
+    protected int CenterX;
+    protected  int CenterY;
+    protected  Player player;
+    private int Speed;
+    private Random random;
 
-    private  int counter;
-
-    Player player = new Player();
-    Random random = new Random();
-
-
-    public void update(){
-        counter++;
-        if (counter>5) {
-            EnemyMovement();
-            counter = 0;
-        }
-
+    public int getCenterX() {
+        return CenterX;
     }
 
-    public void attack(){
-
+    public void setCenterX(int centerX) {
+        CenterX = centerX;
     }
 
-    public void die(){
-
+    public int getCenterY() {
+        return CenterY;
     }
 
-    public void EnemyMovement() {
-            int rand = random.nextInt(10);
-            //System.out.println(rand);
-            if (rand == 1|| rand == 2)
-                Xpos += Speed;
-            if (rand == 3 || rand == 4)
-                YPos += Speed;
-            if (rand == 5)
-                Xpos -= Speed;
-            if (rand == 6)
-                YPos -= Speed;
-    }
-
-
-    public void EnemyFollow(){
-
-    }
-
-    public int getHealth() {
-        return Health;
-    }
-
-    public void setHealth(int health) {
-        Health = health;
-    }
-
-    public int getNewHealth() {
-        return NewHealth;
-    }
-
-    public void setNewHealth(int newHealth) {
-        NewHealth = newHealth;
-    }
-
-    public int getStrength() {
-        return Strength;
-    }
-
-    public void setStrength(int strength) {
-        Strength = strength;
+    public void setCenterY(int centerY) {
+        CenterY = centerY;
     }
 
     public int getSpeed() {
@@ -85,28 +33,44 @@ public class Enemy {
     public void setSpeed(int speed) {
         Speed = speed;
     }
-
-    public int getSpeStrength() {
-        return SpeStrength;
+    public Enemy(int CenterX, int CenterY, int Speed){
+        this.CenterX = CenterX;
+        this.CenterY = CenterY;
+        this.Speed = Speed;
+        //this.player = player;
+        random = new Random();
     }
+    public abstract  void attack();
 
-    public void setSpeStrength(int speStrength) {
-        SpeStrength = speStrength;
-    }
+    public abstract  void die();
 
-    public int getXpos() {
-        return Xpos;
-    }
 
-    public void setXpos(int xpos) {
-        Xpos = xpos;
+    public void EnemyMovement() {
+        int rand = random.nextInt(100);
+        System.out.println(rand);
+        if (rand == 1|| rand == 2)
+            CenterX += Speed;
+        if (rand == 6)
+            CenterY-= Speed;
+        if (rand == 3 || rand == 4)
+            CenterY += Speed;
+        if (rand == 5 )
+            CenterX -= Speed;
     }
+    public void EnemyFollow(){
+        int playerX = player.getCenterX();
+        int playerY = player.getCenterY();
 
-    public int getYPos() {
-        return YPos;
-    }
+        double distance = Math.sqrt(Math.pow(playerX - getCenterX(), 2) + Math.pow(playerY - getCenterY(), 2));
+        System.out.println(distance);
 
-    public void setYPos(int YPos) {
-        this.YPos = YPos;
+        if (distance < 55) {
+            double angle = Math.atan2(playerY - getCenterY(), playerX - getCenterX());
+            CenterX += Math.cos(angle) * getSpeed();
+            CenterY += Math.sin(angle) * getSpeed();
+        }
     }
+    public abstract void paintCharacters(Graphics g);
+
+
 }

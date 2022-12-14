@@ -9,6 +9,7 @@ public abstract class Entity {
      int counter,i,counter2;
     public abstract void  paintCharacters(Graphics g);
     public abstract void update();
+    // take the entity state to start loop and uses list initiated in respective classes
     public void EntityAnimation(BufferedImage playerDirection, List<BufferedImage> characterImages ,  int playIndexStart, int playIndexEnd) {
         counter++;
         if (defaultSprite.equals(playerDirection)) {

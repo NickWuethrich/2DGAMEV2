@@ -1,5 +1,7 @@
 package Entity;
 
+import sun.awt.X11.XSystemTrayPeer;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -182,6 +184,19 @@ public class Player extends Entity  implements KeyListener {
         g.drawImage(defaultSprite, getCenterX(), getCenterY(), null);
     }
     public void update() {
+        if (CenterX < 15){
+            CenterX = 15;
+        }
+        if (CenterX > 640){
+            CenterX = 640;
+        }
+        if (CenterY > 440){
+            CenterY= 440;
+        }
+        if (CenterY < 60 ){
+            CenterY = 60;
+        }
+
         spriteDirectionAnimation();
         EntityAnimation(playerDown, playerImages, 0, 5);
         EntityAnimation(playerUp, playerImages, 6, 11);
@@ -192,14 +207,17 @@ public class Player extends Entity  implements KeyListener {
         EntityAnimation(playerAttackLeft, playerImages, 36, 40);
         EntityAnimation(playerDownAttack, playerImages, 41, 45);
         EnemyFollow(slime);
-        slimeDie(slime);
+        slime.slimeDie(slime);
         EnemyFollow(slime1);
-        slimeDie(slime1);
+        slime1.slimeDie(slime1);
         EnemyFollow(slime2);
-        slimeDie(slime2);
+        slime2.slimeDie(slime2);
         slime.update();
         slime1.update();
         slime2.update();
+        System.out.println(getCenterX());
+        System.out.println("-------------------------");
+        System.out.println(getCenterY());
     }
     private void spriteDirectionAnimation() {
         spriteListInit();
@@ -410,19 +428,6 @@ public class Player extends Entity  implements KeyListener {
             slime.CenterX += Math.cos(angle) * slime.getSpeed();
             slime.CenterY += Math.sin(angle) * slime.getSpeed();
         }
-    }
-
-    private void slimeDie(Slime slime){
-        if(slime.isAlive() == false){
-            counter2++;
-            if(counter2 > 30){
-                System.out.println(counter2);
-                slime.setCenterX(-100);
-                slime.setCenterY(-100);
-                slime.setSpeed(0);
-                counter2 = 0;
-            }
-         }
     }
 }
 

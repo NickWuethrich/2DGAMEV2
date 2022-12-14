@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="testCommit after setting branch as default">
-      <change afterPath="$PROJECT_DIR$/src/Entity/Interaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/images/29675.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/images/grass.png" afterDir="false" />
+    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="added Background &#10;added multiple slime &#10;added Slime Death">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Slime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Slime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameArea/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameArea/Background.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainExecution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile025.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile034.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670943948257</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added Background &#10;added multiple slime &#10;added Slime Death">
+      <created>1670999078636</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670999078636</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +166,7 @@
     <MESSAGE value="Laptop update commit" />
     <MESSAGE value="updated PlayerLeft Animation" />
     <MESSAGE value="testCommit after setting branch as default" />
-    <option name="LAST_COMMIT_MESSAGE" value="testCommit after setting branch as default" />
+    <MESSAGE value="added Background &#10;added multiple slime &#10;added Slime Death" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Background &#10;added multiple slime &#10;added Slime Death" />
   </component>
 </project>

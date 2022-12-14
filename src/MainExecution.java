@@ -12,7 +12,7 @@ public class MainExecution extends JApplet implements Runnable {
     private final int panelWidth = 1600;
     private int SpriteScale = 2;
     private Graphics second;
-   Player player = new Player(150 , 150);
+   Player player = new Player(350 , 250);
    Background background = new Background();
    //Slime slime = new Slime(150, 150,1,player);
 
@@ -58,8 +58,6 @@ public class MainExecution extends JApplet implements Runnable {
         }
 
     }
-
-
 
     public void update() {
          player.update();

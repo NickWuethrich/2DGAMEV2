@@ -12,7 +12,6 @@ import java.util.Random;
 import static java.lang.Math.abs;
 
 public class Slime extends Enemy{
-
     protected int Attack;
     protected int Health = 2;
     private boolean Alive = true;
@@ -122,6 +121,19 @@ public class Slime extends Enemy{
     }
     public void Attack() {
 
+    }
+
+     void slimeDie(Slime slime) {
+        if (slime.isAlive() == false) {
+            counter2++;
+            if (counter2 > 30) {
+                System.out.println(counter2);
+                slime.setCenterX(-100);
+                slime.setCenterY(-100);
+                slime.setSpeed(0);
+                counter2 = 0;
+            }
+        }
     }
 }
 

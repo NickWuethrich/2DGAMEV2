@@ -5,8 +5,8 @@ import java.awt.image.BufferedImage;
 import java.util.List;
 
 public abstract class Entity {
-    protected  BufferedImage defaultSprite;
-    private int counter,i;
+     BufferedImage defaultSprite;
+     int counter,i,counter2;
     public abstract void  paintCharacters(Graphics g);
     public abstract void update();
     public void EntityAnimation(BufferedImage playerDirection, List<BufferedImage> characterImages ,  int playIndexStart, int playIndexEnd) {

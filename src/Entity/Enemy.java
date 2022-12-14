@@ -47,7 +47,6 @@ public abstract class Enemy extends Entity {
 
     public void EnemyMovement() {
         int rand = random.nextInt(100);
-        System.out.println(rand);
         if (rand == 1|| rand == 2)
             CenterX += Speed;
         if (rand == 6)
@@ -62,7 +61,6 @@ public abstract class Enemy extends Entity {
         int playerY = player.getCenterY();
 
         double distance = Math.sqrt(Math.pow(playerX - getCenterX(), 2) + Math.pow(playerY - getCenterY(), 2));
-        System.out.println(distance);
 
         if (distance < 55) {
             double angle = Math.atan2(playerY - getCenterY(), playerX - getCenterX());

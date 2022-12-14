@@ -1,4 +1,5 @@
 import Entity.Player;
+import GameArea.Background;
 
 
 import javax.swing.*;
@@ -7,22 +8,24 @@ import java.awt.image.BufferedImage;
 
 public class MainExecution extends JApplet implements Runnable {
     private BufferedImage image, enemy1;
-    private final int panelHeight = 1080;
-    private final int panelWidth = 1920;
-    private int SpriteScale = 3;
+    private final int panelHeight = 1200;
+    private final int panelWidth = 1600;
+    private int SpriteScale = 2;
     private Graphics second;
    Player player = new Player(150 , 150);
+   Background background = new Background();
    //Slime slime = new Slime(150, 150,1,player);
+
     // testCommit
 
     @Override
     public void init() { // init will run like a main method for Applet
         setSize(panelWidth, panelHeight);
-        add(new DrawPanel());
         setFocusable(true);
         Frame frame = (Frame) this.getParent().getParent();// no idea how this works
         frame.setTitle("2DGame");
         addKeyListener(player);
+        add(new DrawPanel());
     }
     @Override
     public void start() {
@@ -53,7 +56,11 @@ public class MainExecution extends JApplet implements Runnable {
             }
 
         }
+
     }
+
+
+
     public void update() {
          player.update();
        // slime.update();
@@ -69,9 +76,14 @@ public class MainExecution extends JApplet implements Runnable {
             super.paintComponent(g);
             Graphics2D g2d = (Graphics2D) g;
             g2d.scale(SpriteScale,SpriteScale);
+           background.paintBackround(g2d);
             //slime.paintCharacters(g2d);
             player.paintCharacters(g2d);
+            g.dispose();
+            g2d.dispose();
 
         }
+
+
       }
 }

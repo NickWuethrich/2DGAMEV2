@@ -25,12 +25,14 @@ public class Player extends Entity  implements KeyListener {
     private int Attack;
     private int Health;
 
-    private Slime slime ;
+    private Slime slime, slime1, slime2 ;
 
     public Player(int x, int y) {
         x = this.CenterX;
         y = this.CenterY;
         this.slime = new Slime(150, 150,1);
+        this.slime1 = new Slime(250 , 250, 1);
+        this.slime2= new Slime(350, 350, 1);
         this.loadCharacterImage();
         this.playerImageList();
         this.setSpeed(6);
@@ -41,7 +43,7 @@ public class Player extends Entity  implements KeyListener {
             spriteAnimationInit.add(i);
         }
     }
-    protected void loadCharacterImage() {
+    private void loadCharacterImage() {
         try {
             defaultSprite = ImageIO.read(getClass().getResource("/resources/images/PlayerSprites/tile000.png"));
 
@@ -175,6 +177,8 @@ public class Player extends Entity  implements KeyListener {
 
     public void paintCharacters(Graphics g) {
         slime.paintCharacters(g);
+        slime1.paintCharacters(g);
+        slime2.paintCharacters(g);
         g.drawImage(defaultSprite, getCenterX(), getCenterY(), null);
     }
     public void update() {
@@ -187,10 +191,16 @@ public class Player extends Entity  implements KeyListener {
         EntityAnimation(playerLeft, playerImages, 30, 35);
         EntityAnimation(playerAttackLeft, playerImages, 36, 40);
         EntityAnimation(playerDownAttack, playerImages, 41, 45);
+        EnemyFollow(slime);
+        slimeDie(slime);
+        EnemyFollow(slime1);
+        slimeDie(slime1);
+        EnemyFollow(slime2);
+        slimeDie(slime2);
         slime.update();
-        EnemyFollow();
+        slime1.update();
+        slime2.update();
     }
-
     private void spriteDirectionAnimation() {
         spriteListInit();
         if (spriteAnimationInit.get(0) == 1) {
@@ -255,7 +265,10 @@ public class Player extends Entity  implements KeyListener {
                 spriteAnimationInit.set(3, 1);
                 spriteAnimationInit.set(4, 1);
                 spriteAnimationInit.set(5, 1);
-                Attack();
+                Attack(slime);
+                Attack(slime2);
+                Attack(slime1);
+
 
         }
     }
@@ -376,7 +389,7 @@ public class Player extends Entity  implements KeyListener {
         Health = health;
     }
 
-    private  void Attack() {
+    private  void Attack(Slime slime) {
         int playerX = getCenterX();
         int playerY = getCenterY();
         double distance = Math.sqrt(Math.pow(playerX - slime.getCenterX(), 2) + Math.pow(playerY - slime.getCenterY(), 2));
@@ -385,18 +398,31 @@ public class Player extends Entity  implements KeyListener {
            slime.Health = slime.Health - getAttack();
         }
     }
-    public void EnemyFollow(){
+    private  void EnemyFollow(Slime slime){
         int playerX = getCenterX();
         int playerY = getCenterY();
 
         double distance = Math.sqrt(Math.pow(playerX - slime.getCenterX(), 2) + Math.pow(playerY - slime.getCenterY(), 2));
-        System.out.println(distance);
+        // System.out.println(distance);
 
         if (distance < 55) {
             double angle = Math.atan2(playerY - slime.getCenterY(), playerX - slime.getCenterX());
             slime.CenterX += Math.cos(angle) * slime.getSpeed();
             slime.CenterY += Math.sin(angle) * slime.getSpeed();
         }
+    }
+
+    private void slimeDie(Slime slime){
+        if(slime.isAlive() == false){
+            counter2++;
+            if(counter2 > 30){
+                System.out.println(counter2);
+                slime.setCenterX(-100);
+                slime.setCenterY(-100);
+                slime.setSpeed(0);
+                counter2 = 0;
+            }
+         }
     }
 }
 

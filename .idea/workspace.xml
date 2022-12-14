@@ -4,24 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="updated PlayerLeft Animation">
+    <list default="true" id="cf495398-4d0b-4222-9bca-1fd5a4e7f052" name="Changes" comment="testCommit after setting branch as default">
+      <change afterPath="$PROJECT_DIR$/src/Entity/Interaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/29675.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/grass.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Slime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Slime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameArea/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameArea/Background.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainExecution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/NinjaWalk3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile013.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile026.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile027.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/tile004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/tiledirt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/SlimeSprites/tile034.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,23 +45,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nick/Documents/GitHub/2DGAMEV2/src/resources/images/PlayerSprites&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/nick/Documents/GitHub/2DGAMEV2/src/resources/images",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/resources/images/PlayerSprites" />
       <recent name="$PROJECT_DIR$/src/resources/images" />
+      <recent name="$PROJECT_DIR$/src/resources/images/PlayerSprites" />
       <recent name="$PROJECT_DIR$/src/resources/images/SlimeSprites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -140,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670550756275</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="testCommit after setting branch as default">
+      <created>1670943948257</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670943948257</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +165,7 @@
     <MESSAGE value="correct Animation flickering that only occured on Laptop" />
     <MESSAGE value="Laptop update commit" />
     <MESSAGE value="updated PlayerLeft Animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated PlayerLeft Animation" />
+    <MESSAGE value="testCommit after setting branch as default" />
+    <option name="LAST_COMMIT_MESSAGE" value="testCommit after setting branch as default" />
   </component>
 </project>
